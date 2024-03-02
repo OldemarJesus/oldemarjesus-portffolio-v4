@@ -13,6 +13,11 @@ export default {
       },
       fontFamily: {
         'font-mono': ['SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'monospace']
+      },
+      fontSize: {
+        'clamp-xl': "clamp(1.5rem, 8vw, 4.5rem)",
+        'clamp-lg': "clamp(1.45rem, 8vw, 2.25rem)",
+        'clamp-sm': "clamp(1.25rem, 5vw, 2.25rem)"
       }
     },
   },
