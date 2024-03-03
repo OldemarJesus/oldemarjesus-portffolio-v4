@@ -1,9 +1,28 @@
+import { useState } from "react"
 import AppLogo from "./components/AppLogo"
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <div className="bg-gray-900 min-h-screen text-white p-5">
-      <main className="w-full lg:w-9/12 md:w-10/12 xl:w-8/12 flex flex-col mx-auto">
+    <div className="bg-gray-900 min-h-screen text-white">
+      <button className="hidden max-sm:flex absolute right-10 top-10 text-4xl" onClick={() => setMenuOpen(state => !state)}>🍔</button>
+      <nav onClick={() => setMenuOpen(state => !state)} className={`hidden ${menuOpen && "max-sm:flex"} flex-col items-center w-screen h-screen absolute bg-gray-900 bg-opacity-95 pt-10`}>
+        <div className="border-white border-b-2">
+          <a href="#"><AppLogo width={200} /></a>
+        </div>
+        <div className="w-full flex flex-col items-center mt-5">
+          <ol className="w-3/4 flex flex-col items-center gap-10">
+            <a href="#" className="w-full border-2 border-green-blue outline-1 hover:outline-4 text-xl font-bold py-2 text-center">About</a>
+            <a href="#" className="w-full border-2 border-green-blue outline-1 hover:outline-4 text-xl font-bold py-2 text-center">Experience</a>
+            <a href="#" className="w-full border-2 border-green-blue outline-1 hover:outline-4 text-xl font-bold py-2 text-center">Work</a>
+          </ol>
+        </div>
+        <div className="mt-10">
+          <a href="#" className="text-green-blue outline outline-1 outline-offset-2 hover:outline-4 p-2 font-bold text-2xl">Resume</a>
+        </div>
+      </nav>
+      <main className="w-full lg:w-9/12 md:w-10/12 xl:w-8/12 flex flex-col mx-auto  p-5">
         <nav className="max-sm:hidden flex justify-between items-center">
           <div className="hover:outline-4 outline-green-blue hover:outline outline-2 outline-offset-2">
             <a href="#"><AppLogo width={100} /></a>
