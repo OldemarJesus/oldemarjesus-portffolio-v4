@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="bg-gray-900 min-h-screen pb-48 text-white">
       <button className="hidden max-sm:flex absolute right-10 top-10 text-4xl" onClick={() => setMenuOpen(state => !state)}>🍔</button>
-      <nav onClick={() => setMenuOpen(state => !state)} className={`hidden ${menuOpen && "max-sm:flex"} flex-col items-center w-screen h-screen absolute bg-gray-900 bg-opacity-95 pt-10`}>
+      <nav onClick={() => setMenuOpen(state => !state)} className={`hidden ${menuOpen && "max-sm:flex"} flex-col items-center w-screen h-screen absolute bg-gray-900 bg-opacity-95 pt-5`}>
         <div className="border-white border-b-2">
           <a href="#"><AppLogo width={200} /></a>
         </div>
