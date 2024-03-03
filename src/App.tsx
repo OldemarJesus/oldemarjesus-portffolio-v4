@@ -5,7 +5,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <div className="bg-gray-900 min-h-screen pb-48 text-white">
       <button className="hidden max-sm:flex absolute right-10 top-10 text-4xl" onClick={() => setMenuOpen(state => !state)}>🍔</button>
       <nav onClick={() => setMenuOpen(state => !state)} className={`hidden ${menuOpen && "max-sm:flex"} flex-col items-center w-screen h-screen absolute bg-gray-900 bg-opacity-95 pt-10`}>
         <div className="border-white border-b-2">
